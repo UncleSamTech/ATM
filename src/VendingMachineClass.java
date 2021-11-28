@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class VendingMachineClass{
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Vending Machine X..Please select account type");
+        System.out.println("Welcome to Vending Machine X..Please select account type => \n Press 1 for : SavingsAccount \n Press 2 for : CurrentAccount \n Press 3 for : FixedDepositAccount");
         int accountType =  new Scanner(System.in).nextInt();
 
         System.out.println("Please enter your pin");
@@ -37,7 +37,7 @@ public class VendingMachineClass{
                         return savingsAccountClass.ReturnErrorMessage((int)savingsAccountClass.ReturnBalance(amount));
                     }
                     else{
-                        return "sum of " + amount + " withdrawn from account with a balance of " + bal;
+                        return "sum of " + amount + " withdrawn from account with a balance of " + bal + "\n Thank you for banking with us";
                     }
 
                 }
@@ -51,7 +51,7 @@ public class VendingMachineClass{
                         return new CurrentAccountClass().ReturnErrorMessage((int)currentAccountClass.ReturnBalance(amount));
                     }
                     else{
-                        return "sum of " + amount + " withdrawn from account with a balance of " + bal;
+                        return "sum of " + amount + " withdrawn from account with a balance of " + bal + "\n Thank you for banking with us";
                     }
                 }
                 else{
@@ -64,7 +64,7 @@ public class VendingMachineClass{
                         return fixedDepositAccountClass.ReturnErrorMessage((int)fixedDepositAccountClass.ReturnBalance(amount));
                     }
                     else{
-                        return "sum of " + amount + " withdrawn from account with a balance of " + bal;
+                        return "sum of " + amount + " withdrawn from account with a balance of " + bal + "\n Thank you for banking with us";
                     }
                 }
                 else{
