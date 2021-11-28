@@ -42,7 +42,7 @@ public class VendingMachineClass{
 
                 }
                 else{
-                    return "Transaction Terminated as a result of invalid pin";
+                    return "Transaction Terminated as a result of invalid pin..Contact the admin";
                 }
             case 2:
                 if(currentAccountClass.CanDispense(parametersCurr,pin)){
@@ -55,7 +55,7 @@ public class VendingMachineClass{
                     }
                 }
                 else{
-                    return "Transaction Terminated as a result of invalid pin";
+                    return "Transaction Terminated as a result of invalid pin..Contact the admin";
                 }
             case 3:
                 if(fixedDepositAccountClass.CanDispense(parametersFd,pin)){
@@ -68,7 +68,7 @@ public class VendingMachineClass{
                     }
                 }
                 else{
-                    return "Transaction Terminated as a result of invalid pin";
+                    return "Transaction Terminated as a result of invalid pin..Contact the admin";
                 }
             default:
                 return "Invalid account type";
