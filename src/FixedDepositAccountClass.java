@@ -14,7 +14,7 @@ public class FixedDepositAccountClass extends AccountClass implements DispenseCa
      */
     @Override
     public boolean CanDispense(AccountParameters parametersList,int pin) {
-        return parametersList.balance >= 5000 && parametersList.periodSaved >= 5 && pin == 2543;
+        return parametersList.getBalance() >= 5000 && parametersList.getPeriodSaved() >= 5 && pin == 2543;
     }
 
     @Override
@@ -34,4 +34,5 @@ public class FixedDepositAccountClass extends AccountClass implements DispenseCa
             default -> "Unexpected error occurred";
         };
     }
+
 }
