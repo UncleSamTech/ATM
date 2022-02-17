@@ -2,9 +2,6 @@ import Model.AccountParameters;
 
 public class SavingsAccountClass extends AccountClass implements DispenseCashInterface {
 
-
-
-
     public SavingsAccountClass(double accountBalance) {
         super(accountBalance);
     }
@@ -16,7 +13,7 @@ public class SavingsAccountClass extends AccountClass implements DispenseCashInt
      */
     @Override
     public boolean CanDispense(AccountParameters parametersList, int pin) {
-        return parametersList.balance > 1000 &&  pin == 2343;
+        return parametersList.getBalance() > 1000 &&  pin == 2343;
     }
 
     @Override

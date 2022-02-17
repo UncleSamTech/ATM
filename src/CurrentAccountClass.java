@@ -17,7 +17,7 @@ public class CurrentAccountClass extends AccountClass implements DispenseCashInt
      */
     @Override
     public boolean CanDispense(AccountParameters parametersList, int pin) {
-        return parametersList.balance > 2000 && pin == 3454;
+        return parametersList.getBalance() > 2000 && pin == 3454;
     }
 
     @Override

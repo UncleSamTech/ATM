@@ -2,7 +2,7 @@ import Model.AccountParameters;
 
 import java.util.Scanner;
 
-public class VendingMachineClass{
+public class VendingMachineClass {
     public static void main(String[] args) {
 
         System.out.println("Welcome to Vending Machine X..Please select account type => \n Press 1 for : SavingsAccount \n Press 2 for : CurrentAccount \n Press 3 for : FixedDepositAccount");
@@ -75,4 +75,6 @@ public class VendingMachineClass{
         }
 
     }
+
+
 }
