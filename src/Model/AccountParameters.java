@@ -13,16 +13,8 @@ public class AccountParameters {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
     public int getPeriodSaved() {
         return periodSaved;
-    }
-
-    public void setPeriodSaved(int periodSaved) {
-        this.periodSaved = periodSaved;
     }
 
     public AccountParameters(double balance, int periodSaved) {
