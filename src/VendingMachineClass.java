@@ -78,12 +78,6 @@ public class VendingMachineClass extends PaymentAbstractClass{
 
     }
 
-
-    @Override
-    public int DeductCharges(float taxRate) {
-        return 0;
-    }
-
     @Override
     public String UpdateStatus(String Response,int AccountType,double amount, int pin) {
         Response = Vend(AccountType,amount,pin);

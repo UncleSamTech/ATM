@@ -1,7 +1,7 @@
 package Model;
 
 public class AccountParameters {
-    private double balance;
+    private final double balance;
     private int periodSaved;
 
     public AccountParameters(double balance) {
