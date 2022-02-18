@@ -2,7 +2,7 @@ import Model.AccountParameters;
 
 import java.util.Scanner;
 
-public class VendingMachineClass {
+public class VendingMachineClass extends PaymentAbstractClass{
     public static void main(String[] args) {
 
         System.out.println("Welcome to Vending Machine X..Please select account type => \n Press 1 for : SavingsAccount \n Press 2 for : CurrentAccount \n Press 3 for : FixedDepositAccount");
@@ -14,7 +14,9 @@ public class VendingMachineClass {
 
         System.out.println("Please enter amount");
         double amt = new Scanner(System.in).nextDouble();
-       System.out.println(new VendingMachineClass().Vend(accountType,amt,pin));
+        String vend = new VendingMachineClass().Vend(accountType,amt,pin);
+       System.out.println(vend);
+       System.out.println(new VendingMachineClass().UpdateStatus(vend,accountType,amt,pin));
     }
 
     private String Vend( int AccountType, double amount,int pin){
@@ -76,5 +78,18 @@ public class VendingMachineClass {
 
     }
 
+
+    @Override
+    public int DeductCharges(float taxRate) {
+        return 0;
+    }
+
+    @Override
+    public String UpdateStatus(String Response,int AccountType,double amount, int pin) {
+        Response = Vend(AccountType,amount,pin);
+        if(Response.contains("withdrawn")){
+            return "success";}
+        return "failed";
+    }
 
 }
