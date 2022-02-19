@@ -24,6 +24,8 @@ public class VendingMachineClass extends PaymentAbstractClass{
         double CurrentBalance = 2500;
         double FixedDepBalance = 5200;
         int Duration = 9;
+
+        //instantiation
         AccountParameters parametersSv = new AccountParameters(SavingsBalance);
 
         AccountParameters parametersCurr = new AccountParameters(CurrentBalance);
